@@ -1,0 +1,21 @@
+.page-header,
+.page-main,
+.page-footer {
+  padding: var(--space-6);
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.page-main:focus {
+  outline: none;
+}
+
+.page-footer__action {
+  margin-top: var(--space-2);
+}

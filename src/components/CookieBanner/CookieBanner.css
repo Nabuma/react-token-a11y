@@ -1,0 +1,85 @@
+.cookie-banner {
+  position: fixed;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  left: var(--space-4);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 36rem;
+  max-height: 50dvh;
+  overflow-y: auto;
+  padding: var(--space-6);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.25);
+}
+
+/* Keeps focused elements from being hidden behind the fixed banner */
+html:has(.cookie-banner) {
+  scroll-padding-bottom: 50dvh;
+}
+
+.cookie-banner__title {
+  font-size: var(--font-size-xl);
+}
+
+.cookie-banner__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.cookie-banner__fieldset legend {
+  margin-bottom: var(--space-2);
+  padding: 0;
+  font-weight: 700;
+}
+
+.cookie-banner__option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-height: var(--target-size);
+  padding: var(--space-2) 0;
+  cursor: pointer;
+}
+
+.cookie-banner__option input {
+  flex: 0 0 auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.cookie-banner__option label {
+  display: block;
+  font-weight: 700;
+}
+
+.cookie-banner__hint {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (forced-colors: active) {
+  .cookie-banner {
+    border-color: CanvasText;
+    box-shadow: none;
+  }
+}

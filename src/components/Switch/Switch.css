@@ -1,0 +1,99 @@
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--target-size);
+  padding: 4px 8px;
+  border: 0;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.switch__track {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 24px;
+  padding: 2px;
+  border: 2px solid var(--color-border);
+  border-radius: 999px;
+  background-color: var(--color-surface);
+}
+
+.switch__thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  transition: transform 0.15s ease;
+}
+
+.switch[aria-checked="true"] .switch__track {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
+
+.switch[aria-checked="true"] .switch__thumb {
+  background-color: var(--color-on-primary);
+  transform: translateX(20px);
+}
+
+.switch__state {
+  min-width: 1.75rem;
+  font-weight: 700;
+}
+
+.switch:disabled {
+  color: var(--color-disabled-text);
+  cursor: not-allowed;
+}
+
+.switch:disabled .switch__track {
+  border-color: var(--color-border-subtle);
+  background-color: var(--color-disabled-bg);
+}
+
+.switch:disabled .switch__thumb {
+  background-color: var(--color-border-subtle);
+}
+
+@media (forced-colors: active) {
+  .switch__track {
+    border-color: ButtonText;
+    background-color: Canvas;
+  }
+
+  .switch__thumb {
+    background-color: ButtonText;
+  }
+
+  .switch[aria-checked="true"] .switch__track {
+    border-color: Highlight;
+    background-color: Highlight;
+  }
+
+  .switch[aria-checked="true"] .switch__thumb {
+    background-color: HighlightText;
+  }
+
+  .switch:disabled {
+    color: GrayText;
+  }
+
+  .switch:disabled .switch__track {
+    border-color: GrayText;
+  }
+
+  .switch:disabled .switch__thumb {
+    background-color: GrayText;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switch__thumb {
+    transition: none;
+  }
+}

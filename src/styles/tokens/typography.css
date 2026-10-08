@@ -1,0 +1,15 @@
+:root {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.75rem;
+
+  --line-height-body: 1.5;
+  --line-height-heading: 1.25;
+
+  /* Comfortable reading width for paragraphs */
+  --measure: 65ch;
+}

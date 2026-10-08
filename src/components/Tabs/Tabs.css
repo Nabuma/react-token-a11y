@@ -1,0 +1,58 @@
+.tabs {
+  width: 100%;
+  max-width: 40rem;
+}
+
+.tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.tabs__tab {
+  min-height: var(--target-size);
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid transparent;
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.tabs__tab[aria-selected="true"] {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  font-weight: 700;
+  /* Non-color cue for the selected tab */
+  box-shadow: inset 0 3px 0 var(--color-primary);
+}
+
+.tabs__panels {
+  display: grid;
+}
+
+/* All panels share one grid cell so the container keeps the tallest height.
+   visibility:hidden still removes inactive panels from focus and the a11y tree. */
+.tabs__panel {
+  grid-area: 1 / 1;
+  padding: var(--space-6) var(--space-4);
+}
+
+.tabs__panel[hidden] {
+  display: block;
+  visibility: hidden;
+}
+
+@media (forced-colors: active) {
+  .tabs__list {
+    border-color: CanvasText;
+  }
+
+  .tabs__tab[aria-selected="true"] {
+    border-color: Highlight;
+    box-shadow: inset 0 3px 0 Highlight;
+  }
+}

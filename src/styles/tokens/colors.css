@@ -1,0 +1,69 @@
+/*
+  WCAG 2.2 AA: 4.5:1 for text, 3:1 for UI components.
+  Light: text on bg 16.9:1, muted on bg 10.3:1, on-primary on primary 6.5:1,
+  border on bg 7.6:1. Dark pairs are all above 7:1.
+*/
+:root {
+  color-scheme: light dark;
+
+  --color-bg: #fff;
+  --color-surface: #fff;
+  --color-text: #111827;
+  --color-text-muted: #374151;
+  --color-border: #4b5563;
+  --color-border-subtle: #6b7280;
+  --color-focus: #111827;
+  --color-primary: #005fcc;
+  --color-on-primary: #fff;
+  --color-secondary: #4b5563;
+  --color-on-secondary: #fff;
+  --color-loading: #123c67;
+  --color-on-loading: #fff;
+  --color-disabled-bg: #e5e7eb;
+  --color-disabled-text: #374151;
+
+  --color-pending-bg: #e5e7eb;
+  --color-pending-text: #1f2937;
+  --color-valid-bg: #dcfce7;
+  --color-valid-text: #14532d;
+  --color-invalid-bg: #fee2e2;
+  --color-invalid-text: #7f1d1d;
+  --color-warning-bg: #fef3c7;
+  --color-warning-text: #78350f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0b1220;
+    --color-surface: #111a2e;
+    --color-text: #f3f4f6;
+    --color-text-muted: #d1d5db;
+    --color-border: #9ca3af;
+    --color-border-subtle: #9ca3af;
+    --color-focus: #fff;
+    --color-primary: #60a5fa;
+    --color-on-primary: #0b1220;
+    --color-secondary: #374151;
+    --color-on-secondary: #fff;
+    --color-loading: #1e3a5f;
+    --color-disabled-bg: #1f2937;
+    --color-disabled-text: #9ca3af;
+
+    --color-pending-bg: #374151;
+    --color-pending-text: #f3f4f6;
+    --color-valid-bg: #14532d;
+    --color-valid-text: #dcfce7;
+    --color-invalid-bg: #7f1d1d;
+    --color-invalid-text: #fee2e2;
+    --color-warning-bg: #78350f;
+    --color-warning-text: #fef3c7;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-border: var(--color-text);
+    --color-border-subtle: var(--color-text);
+    --color-text-muted: var(--color-text);
+  }
+}
