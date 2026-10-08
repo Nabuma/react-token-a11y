@@ -1,12 +1,12 @@
 .accordion {
   width: 100%;
   max-width: 40rem;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-hard-small);
 }
 
 .accordion__item + .accordion__item {
-  border-top: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-border);
 }
 
 .accordion__trigger {
@@ -26,6 +26,15 @@
   text-align: left;
 }
 
+.accordion__trigger:focus-visible {
+  outline-offset: -4px;
+}
+
+.accordion__trigger:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
 .accordion__panel {
   padding: 0 var(--space-4) var(--space-4);
 }
@@ -34,5 +43,9 @@
   .accordion,
   .accordion__item + .accordion__item {
     border-color: CanvasText;
+  }
+
+  .accordion__trigger:hover {
+    outline: 2px solid Highlight;
   }
 }

@@ -5,12 +5,25 @@
   min-width: var(--target-size);
   min-height: var(--target-size);
   padding: 8px 16px;
-  border: 2px solid transparent;
-  border-radius: 4px;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: 0;
+  box-shadow: var(--shadow-hard-small);
   cursor: pointer;
   font: inherit;
+  font-weight: 750;
   line-height: 1.5;
   text-align: center;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.button:not(:disabled):hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-border);
+}
+
+.button:not(:disabled):active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-border);
 }
 
 .button--primary {
@@ -25,7 +38,6 @@
 
 .button--tertiary {
   background-color: var(--color-surface);
-  border-color: var(--color-border);
   color: var(--color-text);
 }
 
@@ -49,6 +61,8 @@
   border-color: var(--color-border-subtle);
   color: var(--color-disabled-text);
   cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }
 
 .button--loading:disabled {
@@ -80,6 +94,7 @@
 @media (forced-colors: active) {
   .button {
     border-color: ButtonText;
+    box-shadow: none;
   }
 
   .button:disabled {
@@ -97,8 +112,11 @@
   }
 }
 
-/* The spinner keeps turning: it is the only cue that work is in progress */
 @media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
   .button--loading:disabled::before {
     animation-duration: 0.8s !important;
   }

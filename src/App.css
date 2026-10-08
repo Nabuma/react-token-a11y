@@ -1,21 +1,49 @@
 .page-header,
 .page-main,
 .page-footer {
-  padding: var(--space-6);
+  width: min(100% - 2rem, 64rem);
+  margin-inline: auto;
+}
+
+.page-header {
+  margin-top: var(--space-8);
+  padding: var(--space-8);
+  border: var(--border-width) solid var(--color-border);
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+  box-shadow: 8px 8px 0 var(--color-border);
 }
 
 .page-main {
   display: flex;
   flex-direction: column;
-  gap: var(--space-20);
-  max-width: 64rem;
-  margin-inline: auto;
+  gap: var(--space-8);
+  padding-block: var(--space-8);
 }
 
 .page-main:focus {
   outline: none;
 }
 
+.page-footer {
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  border: var(--border-width) solid var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-hard-small);
+}
+
 .page-footer__action {
   margin-top: var(--space-2);
+}
+
+@media (max-width: 30rem) {
+  .page-header {
+    padding: var(--space-6);
+  }
+
+  .page-main {
+    gap: var(--space-6);
+    padding-block: var(--space-6);
+  }
 }

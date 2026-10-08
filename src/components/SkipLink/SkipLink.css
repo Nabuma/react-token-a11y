@@ -4,9 +4,10 @@
   left: var(--space-2);
   z-index: 100;
   padding: var(--space-3) var(--space-4);
-  border: 2px solid var(--color-text);
+  border: var(--border-width) solid var(--color-border);
   background-color: var(--color-bg);
   color: var(--color-text);
+  box-shadow: var(--shadow-hard-small);
   transform: translateY(-200%);
 }
 

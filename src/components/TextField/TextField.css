@@ -19,10 +19,18 @@
 .field__input {
   min-height: var(--target-size);
   padding: var(--space-2) var(--space-3);
-  border: 2px solid var(--color-border);
-  border-radius: 4px;
+  border: var(--border-width) solid var(--color-border);
   background-color: var(--color-surface);
   color: var(--color-text);
+  box-shadow: 3px 3px 0 var(--color-border);
+}
+
+.field__input:hover {
+  border-color: var(--color-primary);
+}
+
+.field__input:focus-visible {
+  box-shadow: 5px 5px 0 var(--color-border);
 }
 
 .field--invalid .field__input {

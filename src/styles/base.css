@@ -15,10 +15,16 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: var(--line-height-heading);
+  font-weight: 850;
+  letter-spacing: -0.035em;
 }
 
 h1 {
   font-size: var(--font-size-2xl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
 }
 
 p {
@@ -28,11 +34,12 @@ p {
 a {
   color: var(--color-primary);
   text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.1em;
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
+  outline: 4px solid var(--color-focus);
+  outline-offset: 4px;
 }
 
 /* Keeps focused elements from hiding under sticky headers */

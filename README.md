@@ -4,7 +4,7 @@ A small showcase of **accessible React components** built on **design tokens**. 
 reference for how to build common UI patterns that work with keyboard, screen readers, zoom, dark
 mode, high contrast and reduced motion, without relying on a UI library.
 
-Built with React 19, TypeScript, Vite and plain CSS.
+Built with React 19, TypeScript, Vite and plain CSS, with a bold neo-brutalist visual style.
 
 ## Getting started
 
@@ -37,6 +37,7 @@ violation to the browser console.
 ## Accessibility foundations
 
 - **Design tokens** (CSS custom properties) for colors, spacing and typography.
+- **Neo-brutalist styling** with high-contrast color blocks, hard edges and offset shadows; all functional cues remain available without color or motion.
 - **Rem-based type** on a system font stack, so text follows the user's browser settings.
 - **Color contrast** checked for light and dark themes, plus `prefers-contrast: more`.
 - **Visible focus** with a global `:focus-visible` style that also works in forced-colors mode.

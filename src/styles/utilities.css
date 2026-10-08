@@ -11,9 +11,10 @@
 }
 
 .cluster {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  align-items: stretch;
   gap: var(--space-4);
 }
 

@@ -5,8 +5,8 @@
   width: 100%;
   max-width: 40rem;
   padding: var(--space-4);
-  border: 2px solid currentColor;
-  border-radius: 8px;
+  border: var(--border-width) solid currentColor;
+  box-shadow: var(--shadow-hard-small);
 }
 
 .alert__icon {
@@ -17,7 +17,6 @@
   width: 1.5rem;
   height: 1.5rem;
   border: 2px solid currentColor;
-  border-radius: 50%;
   font-weight: 700;
 }
 
@@ -38,6 +37,11 @@
   color: inherit;
   cursor: pointer;
   font: inherit;
+}
+
+.alert__dismiss:hover {
+  background-color: currentColor;
+  color: var(--color-surface);
 }
 
 .alert--info {
@@ -64,5 +68,10 @@
   .alert,
   .alert__icon {
     border-color: CanvasText;
+  }
+
+  .alert__dismiss:hover {
+    border: 2px solid Highlight;
+    color: HighlightText;
   }
 }
